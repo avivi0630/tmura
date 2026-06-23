@@ -1,0 +1,14 @@
+Tmura - Smart File Converter
+========================================
+
+This will install Tmura on your computer.
+
+Requirements:
+- Python 3.11+ must be installed
+- pip packages will be auto-installed on first run
+- ffmpeg is recommended for video/audio conversion
+
+Chrome Extension:
+- After installation, the Chrome extension will be
+  automatically registered for native messaging.
+- Install the extension from the Chrome Web Store.
