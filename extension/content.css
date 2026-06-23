@@ -1,0 +1,125 @@
+/* Tmura - Compression modal styles */
+
+#tmura-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    direction: rtl;
+}
+
+#tmura-modal-overlay.active {
+    display: flex;
+    animation: tmuraFadeIn 0.3s ease;
+}
+
+.tmura-popup {
+    background: white;
+    width: 380px;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: tmuraSlideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes tmuraSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tmura-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.tmura-subtitle {
+    font-size: 11px;
+    color: #86868b;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.tmura-file-info {
+    background: #f5f5f7;
+    padding: 10px 12px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #1d1d1f;
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+.tmura-select {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #d2d2d7;
+    margin-bottom: 20px;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    direction: rtl;
+}
+
+.tmura-btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.tmura-btn-primary:hover {
+    background: #0059c4;
+}
+
+.tmura-btn-primary:disabled {
+    background: #c7c7cc;
+    cursor: not-allowed;
+}
+
+.tmura-btn-secondary {
+    background: none;
+    border: none;
+    color: #86868b;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.tmura-btn-secondary:hover {
+    color: #0071e3;
+}
+
+@keyframes tmuraFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+    .tmura-popup {
+        width: 92%;
+        max-width: 380px;
+        padding: 20px;
+    }
+}
